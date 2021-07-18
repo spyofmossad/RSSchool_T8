@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7319909326A2118800428DE4 /* PaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7319909226A2118800428DE4 /* PaletteViewController.m */; };
+		7319909726A2195500428DE4 /* ShadowedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7319909626A2195500428DE4 /* ShadowedButton.m */; };
+		731990A226A220E400428DE4 /* PaletteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 731990A126A220E400428DE4 /* PaletteButton.m */; };
+		731A72F826A0A6D700B95D77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 731A72F726A0A6D700B95D77 /* AppDelegate.m */; };
+		731A72FE26A0A6D700B95D77 /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731A72FD26A0A6D700B95D77 /* CanvasViewController.m */; };
+		731A730326A0A6DA00B95D77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 731A730226A0A6DA00B95D77 /* Assets.xcassets */; };
+		731A730626A0A6DA00B95D77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 731A730426A0A6DA00B95D77 /* LaunchScreen.storyboard */; };
+		731A730926A0A6DA00B95D77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 731A730826A0A6DA00B95D77 /* main.m */; };
+		731A732226A1675E00B95D77 /* AppButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 731A732126A1675E00B95D77 /* AppButton.m */; };
+		731A732826A193B500B95D77 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731A732726A193B500B95D77 /* ModalViewController.m */; };
+		731A732D26A1C16400B95D77 /* UIColor+CustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 731A732C26A1C16400B95D77 /* UIColor+CustomColor.m */; };
+		731A733426A1CDF500B95D77 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 731A733226A1CDF500B95D77 /* Montserrat-Medium.ttf */; };
+		731A733526A1CDF500B95D77 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 731A733326A1CDF500B95D77 /* Montserrat-Regular.ttf */; };
+		731A734026A1D0B200B95D77 /* UIFont+Montserrat.m in Sources */ = {isa = PBXBuildFile; fileRef = 731A733F26A1D0B200B95D77 /* UIFont+Montserrat.m */; };
+		7357E50726A2CEFB007B5904 /* SwiftDrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357E50626A2CEFB007B5904 /* SwiftDrawingsViewController.swift */; };
+		7357E51D26A2D8BF007B5904 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7357E51C26A2D8BF007B5904 /* Model.m */; };
+		7357E52226A2F352007B5904 /* DrawingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7357E52126A2F352007B5904 /* DrawingButton.m */; };
+		73AF9B6526A35D5A006AC101 /* SwiftTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF9B6426A35D5A006AC101 /* SwiftTimerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7319909126A2118800428DE4 /* PaletteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteViewController.h; sourceTree = "<group>"; };
+		7319909226A2118800428DE4 /* PaletteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteViewController.m; sourceTree = "<group>"; };
+		7319909526A2195500428DE4 /* ShadowedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadowedButton.h; sourceTree = "<group>"; };
+		7319909626A2195500428DE4 /* ShadowedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShadowedButton.m; sourceTree = "<group>"; };
+		731990A026A220E400428DE4 /* PaletteButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteButton.h; sourceTree = "<group>"; };
+		731990A126A220E400428DE4 /* PaletteButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteButton.m; sourceTree = "<group>"; };
+		731A72F326A0A6D700B95D77 /* RSSchool_T8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T8.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		731A72F626A0A6D700B95D77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		731A72F726A0A6D700B95D77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		731A72FC26A0A6D700B95D77 /* CanvasViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
+		731A72FD26A0A6D700B95D77 /* CanvasViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
+		731A730226A0A6DA00B95D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		731A730526A0A6DA00B95D77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		731A730726A0A6DA00B95D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		731A730826A0A6DA00B95D77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		731A732026A1675E00B95D77 /* AppButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppButton.h; sourceTree = "<group>"; };
+		731A732126A1675E00B95D77 /* AppButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppButton.m; sourceTree = "<group>"; };
+		731A732626A193B500B95D77 /* ModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		731A732726A193B500B95D77 /* ModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		731A732B26A1C16400B95D77 /* UIColor+CustomColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColor.h"; sourceTree = "<group>"; };
+		731A732C26A1C16400B95D77 /* UIColor+CustomColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColor.m"; sourceTree = "<group>"; };
+		731A733226A1CDF500B95D77 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		731A733326A1CDF500B95D77 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		731A733E26A1D0B200B95D77 /* UIFont+Montserrat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Montserrat.h"; sourceTree = "<group>"; };
+		731A733F26A1D0B200B95D77 /* UIFont+Montserrat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Montserrat.m"; sourceTree = "<group>"; };
+		7357E50526A2CEFA007B5904 /* RSSchool_T8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSchool_T8-Bridging-Header.h"; sourceTree = "<group>"; };
+		7357E50626A2CEFB007B5904 /* SwiftDrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDrawingsViewController.swift; sourceTree = "<group>"; };
+		7357E51B26A2D8BF007B5904 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		7357E51C26A2D8BF007B5904 /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		7357E52026A2F352007B5904 /* DrawingButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingButton.h; sourceTree = "<group>"; };
+		7357E52126A2F352007B5904 /* DrawingButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingButton.m; sourceTree = "<group>"; };
+		73AF9B6426A35D5A006AC101 /* SwiftTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTimerViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		731A72F026A0A6D700B95D77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7319909A26A2196200428DE4 /* ShadowedButton */ = {
+			isa = PBXGroup;
+			children = (
+				7319909526A2195500428DE4 /* ShadowedButton.h */,
+				7319909626A2195500428DE4 /* ShadowedButton.m */,
+			);
+			path = ShadowedButton;
+			sourceTree = "<group>";
+		};
+		7319909D26A219BC00428DE4 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7319909A26A2196200428DE4 /* ShadowedButton */,
+				731A732426A1676200B95D77 /* AppButton */,
+				731990A426A220E800428DE4 /* PaletteButton */,
+				7357E52426A2FD51007B5904 /* DrawingButton */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		731990A426A220E800428DE4 /* PaletteButton */ = {
+			isa = PBXGroup;
+			children = (
+				731990A026A220E400428DE4 /* PaletteButton.h */,
+				731990A126A220E400428DE4 /* PaletteButton.m */,
+			);
+			path = PaletteButton;
+			sourceTree = "<group>";
+		};
+		731A72EA26A0A6D700B95D77 = {
+			isa = PBXGroup;
+			children = (
+				731A72F526A0A6D700B95D77 /* RSSchool_T8 */,
+				731A72F426A0A6D700B95D77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		731A72F426A0A6D700B95D77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				731A72F326A0A6D700B95D77 /* RSSchool_T8.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		731A72F526A0A6D700B95D77 /* RSSchool_T8 */ = {
+			isa = PBXGroup;
+			children = (
+				731A72F626A0A6D700B95D77 /* AppDelegate.h */,
+				731A72F726A0A6D700B95D77 /* AppDelegate.m */,
+				73C550D726A2AD2E008670BA /* MainScreen */,
+				73C550DE26A2ADA6008670BA /* DrawingsScreen */,
+				7319909D26A219BC00428DE4 /* Buttons */,
+				731A731626A1644900B95D77 /* Resources */,
+				731A732F26A1C16900B95D77 /* Categories */,
+				7357E51B26A2D8BF007B5904 /* Model.h */,
+				7357E51C26A2D8BF007B5904 /* Model.m */,
+			);
+			path = RSSchool_T8;
+			sourceTree = "<group>";
+		};
+		731A731626A1644900B95D77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				731A733726A1CDFC00B95D77 /* Font */,
+				731A730226A0A6DA00B95D77 /* Assets.xcassets */,
+				731A730426A0A6DA00B95D77 /* LaunchScreen.storyboard */,
+				731A730726A0A6DA00B95D77 /* Info.plist */,
+				7357E50526A2CEFA007B5904 /* RSSchool_T8-Bridging-Header.h */,
+				731A730826A0A6DA00B95D77 /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		731A732426A1676200B95D77 /* AppButton */ = {
+			isa = PBXGroup;
+			children = (
+				731A732026A1675E00B95D77 /* AppButton.h */,
+				731A732126A1675E00B95D77 /* AppButton.m */,
+			);
+			path = AppButton;
+			sourceTree = "<group>";
+		};
+		731A732F26A1C16900B95D77 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				731A732B26A1C16400B95D77 /* UIColor+CustomColor.h */,
+				731A732C26A1C16400B95D77 /* UIColor+CustomColor.m */,
+				731A733E26A1D0B200B95D77 /* UIFont+Montserrat.h */,
+				731A733F26A1D0B200B95D77 /* UIFont+Montserrat.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		731A733726A1CDFC00B95D77 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				731A733226A1CDF500B95D77 /* Montserrat-Medium.ttf */,
+				731A733326A1CDF500B95D77 /* Montserrat-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		731A734326A1FBAD00B95D77 /* ModalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				731A732626A193B500B95D77 /* ModalViewController.h */,
+				731A732726A193B500B95D77 /* ModalViewController.m */,
+			);
+			path = ModalViewController;
+			sourceTree = "<group>";
+		};
+		7357E50B26A2D5FF007B5904 /* CanvasViewController */ = {
+			isa = PBXGroup;
+			children = (
+				731A72FC26A0A6D700B95D77 /* CanvasViewController.h */,
+				731A72FD26A0A6D700B95D77 /* CanvasViewController.m */,
+			);
+			path = CanvasViewController;
+			sourceTree = "<group>";
+		};
+		7357E52426A2FD51007B5904 /* DrawingButton */ = {
+			isa = PBXGroup;
+			children = (
+				7357E52026A2F352007B5904 /* DrawingButton.h */,
+				7357E52126A2F352007B5904 /* DrawingButton.m */,
+			);
+			path = DrawingButton;
+			sourceTree = "<group>";
+		};
+		73AF9B5F26A2FED4006AC101 /* TimerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				73AF9B6426A35D5A006AC101 /* SwiftTimerViewController.swift */,
+			);
+			path = TimerViewController;
+			sourceTree = "<group>";
+		};
+		73C550D626A2ACFA008670BA /* PaletteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7319909126A2118800428DE4 /* PaletteViewController.h */,
+				7319909226A2118800428DE4 /* PaletteViewController.m */,
+			);
+			path = PaletteViewController;
+			sourceTree = "<group>";
+		};
+		73C550D726A2AD2E008670BA /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7357E50B26A2D5FF007B5904 /* CanvasViewController */,
+				73C550D626A2ACFA008670BA /* PaletteViewController */,
+				731A734326A1FBAD00B95D77 /* ModalViewController */,
+				73AF9B5F26A2FED4006AC101 /* TimerViewController */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		73C550DE26A2ADA6008670BA /* DrawingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7357E50626A2CEFB007B5904 /* SwiftDrawingsViewController.swift */,
+			);
+			path = DrawingsScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		731A72F226A0A6D700B95D77 /* RSSchool_T8 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 731A730C26A0A6DA00B95D77 /* Build configuration list for PBXNativeTarget "RSSchool_T8" */;
+			buildPhases = (
+				731A72EF26A0A6D700B95D77 /* Sources */,
+				731A72F026A0A6D700B95D77 /* Frameworks */,
+				731A72F126A0A6D700B95D77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSSchool_T8;
+			productName = RSSchool_T8;
+			productReference = 731A72F326A0A6D700B95D77 /* RSSchool_T8.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		731A72EB26A0A6D700B95D77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					731A72F226A0A6D700B95D77 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+				};
+			};
+			buildConfigurationList = 731A72EE26A0A6D700B95D77 /* Build configuration list for PBXProject "RSSchool_T8" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 731A72EA26A0A6D700B95D77;
+			productRefGroup = 731A72F426A0A6D700B95D77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				731A72F226A0A6D700B95D77 /* RSSchool_T8 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		731A72F126A0A6D700B95D77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				731A733526A1CDF500B95D77 /* Montserrat-Regular.ttf in Resources */,
+				731A730626A0A6DA00B95D77 /* LaunchScreen.storyboard in Resources */,
+				731A733426A1CDF500B95D77 /* Montserrat-Medium.ttf in Resources */,
+				731A730326A0A6DA00B95D77 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		731A72EF26A0A6D700B95D77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7319909726A2195500428DE4 /* ShadowedButton.m in Sources */,
+				7319909326A2118800428DE4 /* PaletteViewController.m in Sources */,
+				73AF9B6526A35D5A006AC101 /* SwiftTimerViewController.swift in Sources */,
+				731A72FE26A0A6D700B95D77 /* CanvasViewController.m in Sources */,
+				731A72F826A0A6D700B95D77 /* AppDelegate.m in Sources */,
+				7357E52226A2F352007B5904 /* DrawingButton.m in Sources */,
+				731A730926A0A6DA00B95D77 /* main.m in Sources */,
+				731A734026A1D0B200B95D77 /* UIFont+Montserrat.m in Sources */,
+				731A732226A1675E00B95D77 /* AppButton.m in Sources */,
+				7357E51D26A2D8BF007B5904 /* Model.m in Sources */,
+				731990A226A220E400428DE4 /* PaletteButton.m in Sources */,
+				7357E50726A2CEFB007B5904 /* SwiftDrawingsViewController.swift in Sources */,
+				731A732D26A1C16400B95D77 /* UIColor+CustomColor.m in Sources */,
+				731A732826A193B500B95D77 /* ModalViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		731A730426A0A6DA00B95D77 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				731A730526A0A6DA00B95D77 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		731A730A26A0A6DA00B95D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		731A730B26A0A6DA00B95D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		731A730D26A0A6DA00B95D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S3668T7USD;
+				INFOPLIST_FILE = RSSchool_T8/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "test.RSSchool-T8";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8/Resources/RSSchool_T8-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		731A730E26A0A6DA00B95D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S3668T7USD;
+				INFOPLIST_FILE = RSSchool_T8/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "test.RSSchool-T8";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8/Resources/RSSchool_T8-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		731A72EE26A0A6D700B95D77 /* Build configuration list for PBXProject "RSSchool_T8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				731A730A26A0A6DA00B95D77 /* Debug */,
+				731A730B26A0A6DA00B95D77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		731A730C26A0A6DA00B95D77 /* Build configuration list for PBXNativeTarget "RSSchool_T8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				731A730D26A0A6DA00B95D77 /* Debug */,
+				731A730E26A0A6DA00B95D77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 731A72EB26A0A6D700B95D77 /* Project object */;
+}
