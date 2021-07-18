@@ -20,6 +20,10 @@
     
     [self addSaveButton];
     [self.saveButton addTarget:self action:@selector(saveOnTap) forControlEvents:UIControlEventTouchUpInside];
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(saveOnTap)];
+    swipe.direction = UISwipeGestureRecognizerDirectionDown;
+    [self.view addGestureRecognizer:swipe];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -45,9 +49,13 @@
 }
 
 - (void)saveOnTap {
-    [self willMoveToParentViewController:nil];
-    [self.view removeFromSuperview];
-    [self removeFromParentViewController];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.view.frame = CGRectMake(0, self.view.bounds.size.height * 2, self.view.bounds.size.width, self.view.bounds.size.height / 2);
+    } completion:^(BOOL finished) {
+        [self willMoveToParentViewController:nil];
+        [self.view removeFromSuperview];
+        [self removeFromParentViewController];
+    }];
 }
 
 @end

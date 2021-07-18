@@ -135,9 +135,14 @@
         self.drawColors = drawColors;
     }];
     [self addChildViewController: palette];
-    palette.view.frame = CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height / 2);
+    palette.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height / 2);
     [self.view addSubview: palette.view];
-    [palette didMoveToParentViewController:self];
+    
+    [UIView animateWithDuration:0.6 delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        palette.view.frame = CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height / 2);
+    } completion:^(BOOL finished) {
+        [palette didMoveToParentViewController:self];
+    }];
 }
 
 - (void)openTimerOnTap {
@@ -146,9 +151,14 @@
         self.drawTime = newDrawTime;
     };
     [self addChildViewController: timerViewController];
-    timerViewController.view.frame = CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height / 2);
+    timerViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height / 2);
     [self.view addSubview: timerViewController.view];
-    [timerViewController didMoveToParentViewController:self];
+    
+    [UIView animateWithDuration:0.6 delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        timerViewController.view.frame = CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height / 2);
+    } completion:^(BOOL finished) {
+        [timerViewController didMoveToParentViewController:self];
+    }];
 }
 
 - (void)drawOnTap {
