@@ -242,13 +242,7 @@
 - (UIImage *)renderImage {
     UIGraphicsImageRenderer *renderer = [[UIGraphicsImageRenderer alloc] initWithSize:CGSizeMake(300, 300)];
     NSData *imageData = [renderer PNGDataWithActions:^(UIGraphicsImageRendererContext * context) {
-                
-        DrawModel *model = [self.modelFactory getDrawModelOf: self.currentDrawing];
-        for (int i = 0; i < model.paths.count; i++) {
-            [self.modelFactory.colors[i] setStroke];
-            [[UIColor clearColor] setFill];
-            [model.paths[i] stroke];
-        }
+        [self.canvas.layer renderInContext:context.CGContext];
     }];
     
     return [[UIImage alloc] initWithData:imageData];
