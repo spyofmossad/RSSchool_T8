@@ -38,13 +38,15 @@
 }
 
 - (void)addSaveButton {
-    self.saveButton = [[AppButton alloc] initWithTitle:@"Save"];
+    self.saveButton = [[AppButton alloc] initWithTitle:@"Save" andSize:CGSizeMake(85, 32)];
     [self.view addSubview:self.saveButton];
     
     self.saveButton.translatesAutoresizingMaskIntoConstraints = false;
     [NSLayoutConstraint activateConstraints:@[
         [self.saveButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:20],
-        [self.saveButton.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-40]
+        [self.saveButton.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-40],
+        [self.saveButton.widthAnchor constraintEqualToConstant:85],
+        [self.saveButton.heightAnchor constraintEqualToConstant:32]
     ]];
 }
 

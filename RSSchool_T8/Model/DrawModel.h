@@ -21,9 +21,6 @@ typedef NS_ENUM(NSUInteger, DrawingType) {
 
 @property NSArray<UIBezierPath *> *paths;
 @property NSMutableArray<CAShapeLayer *> *layers;
-@property NSMutableArray<UIColor *> *colors;
-
-- (instancetype)init;
 
 @end
 

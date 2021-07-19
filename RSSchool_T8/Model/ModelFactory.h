@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ModelFactory : NSObject
 
+@property NSMutableArray<UIColor *> *colors;
+- (instancetype)init;
 - (DrawModel *)getDrawModelOf:(DrawingType) type;
 
 @end

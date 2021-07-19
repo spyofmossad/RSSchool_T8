@@ -11,9 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ShadowedButton : UIButton
 
-@property BOOL shadowIsAdded;
-@property BOOL isPreSelected;
-- (instancetype)initWithTitle:(NSString *)title;
+- (instancetype)initWithTitle:(NSString *)title andSize:(CGSize)size;
 
 @end
 

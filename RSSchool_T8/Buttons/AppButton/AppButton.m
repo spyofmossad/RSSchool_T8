@@ -32,11 +32,5 @@
         self.layer.opacity = 0.5;
     }
 }
-
-- (void)setTitle:(NSString *)title forState:(UIControlState)state {
-    [super setTitle:title forState:state];
-    
-    self.shadowIsAdded = false;
-}
     
 @end

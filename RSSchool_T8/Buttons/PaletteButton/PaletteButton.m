@@ -18,7 +18,7 @@
 @implementation PaletteButton
 
 -(instancetype)init {
-    self = [super init];
+    self = [super initWithTitle:@"" andSize:CGSizeMake(40, 40)];
     UIBezierPath *outerPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 40, 40) cornerRadius:8];
     UIBezierPath *innerPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(2, 2, 36, 36) cornerRadius:8];
     [outerPath appendPath:innerPath];

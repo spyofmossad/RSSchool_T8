@@ -69,45 +69,55 @@
         [self.canvas.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor]
     ]];
     
-    self.openPalette = [[AppButton alloc] initWithTitle:@"Open Palette"];
+    self.openPalette = [[AppButton alloc] initWithTitle:@"Open Palette" andSize: CGSizeMake(163, 32)];
     [self.view addSubview:self.openPalette];
     self.openPalette.translatesAutoresizingMaskIntoConstraints = false;
     [NSLayoutConstraint activateConstraints:@[
         [self.openPalette.topAnchor constraintEqualToAnchor:self.canvas.bottomAnchor constant:50],
-        [self.openPalette.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:20]
+        [self.openPalette.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:20],
+        [self.openPalette.widthAnchor constraintEqualToConstant:163],
+        [self.openPalette.heightAnchor constraintEqualToConstant:32]
     ]];
 
-    self.openTimer = [[AppButton alloc] initWithTitle:@"Open Timer"];
+    self.openTimer = [[AppButton alloc] initWithTitle:@"Open Timer" andSize: CGSizeMake(151, 32)];
     [self.view addSubview:self.openTimer];
     self.openTimer.translatesAutoresizingMaskIntoConstraints = false;
     [NSLayoutConstraint activateConstraints:@[
         [self.openTimer.topAnchor constraintEqualToAnchor:self.openPalette.bottomAnchor constant:20],
-        [self.openTimer.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:20]
+        [self.openTimer.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:20],
+        [self.openTimer.widthAnchor constraintEqualToConstant:151],
+        [self.openTimer.heightAnchor constraintEqualToConstant:32]
     ]];
 
-    self.draw = [[AppButton alloc] initWithTitle:@"Draw"];
+    self.draw = [[AppButton alloc] initWithTitle:@"Draw" andSize: CGSizeMake(91, 32)];
     [self.view addSubview:self.draw];
     self.draw.translatesAutoresizingMaskIntoConstraints = false;
     [NSLayoutConstraint activateConstraints:@[
         [self.draw.topAnchor constraintEqualToAnchor:self.canvas.bottomAnchor constant:50],
-        [self.draw.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-40]
+        [self.draw.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-40],
+        [self.draw.widthAnchor constraintEqualToConstant:91],
+        [self.draw.heightAnchor constraintEqualToConstant:32]
     ]];
 
-    self.reset = [[AppButton alloc] initWithTitle:@"Reset"];
+    self.reset = [[AppButton alloc] initWithTitle:@"Reset" andSize: CGSizeMake(91, 32)];
     [self.view addSubview:self.reset];
     self.reset.translatesAutoresizingMaskIntoConstraints = false;
     self.reset.hidden = true;
     [NSLayoutConstraint activateConstraints:@[
         [self.reset.topAnchor constraintEqualToAnchor:self.canvas.bottomAnchor constant:50],
-        [self.reset.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-40]
+        [self.reset.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-40],
+        [self.reset.widthAnchor constraintEqualToConstant:91],
+        [self.reset.heightAnchor constraintEqualToConstant:32]
     ]];
 
-    self.share = [[AppButton alloc] initWithTitle:@"Share"];
+    self.share = [[AppButton alloc] initWithTitle:@"Share" andSize: CGSizeMake(95, 32)];
     [self.view addSubview:self.share];
     self.share.translatesAutoresizingMaskIntoConstraints = false;
     [NSLayoutConstraint activateConstraints:@[
         [self.share.topAnchor constraintEqualToAnchor:self.draw.bottomAnchor constant:20],
-        [self.share.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-40]
+        [self.share.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-40],
+        [self.share.widthAnchor constraintEqualToConstant:95],
+        [self.share.heightAnchor constraintEqualToConstant:32]
     ]];
     
     self.share.enabled = false;
@@ -136,10 +146,9 @@
     [palette getDrawColors:^(NSMutableArray *newColors) {
         if (newColors.count > 0) {
             self.drawColors = newColors;
-            DrawModel *model = [self.modelFactory getDrawModelOf: self.currentDrawing];
-            model.colors = newColors;
-            while (model.colors.count != 3) {
-                [model.colors addObject:UIColor.blackColor];
+            self.modelFactory.colors = newColors;
+            while (self.modelFactory.colors.count != 3) {
+                [self.modelFactory.colors addObject:UIColor.blackColor];
             }
         }
     }];
@@ -177,7 +186,7 @@
         
     DrawModel *model = [self.modelFactory getDrawModelOf: self.currentDrawing];
     for (int i = 0; i < model.layers.count; i++) {
-        model.layers[i].strokeColor = model.colors[i].CGColor;
+        model.layers[i].strokeColor = self.modelFactory.colors[i].CGColor;
         [self.canvas.layer addSublayer:model.layers[i]];
     }
     
@@ -233,10 +242,10 @@
 - (UIImage *)renderImage {
     UIGraphicsImageRenderer *renderer = [[UIGraphicsImageRenderer alloc] initWithSize:CGSizeMake(300, 300)];
     NSData *imageData = [renderer PNGDataWithActions:^(UIGraphicsImageRendererContext * context) {
-        
+                
         DrawModel *model = [self.modelFactory getDrawModelOf: self.currentDrawing];
         for (int i = 0; i < model.paths.count; i++) {
-            [model.colors[i] setStroke];
+            [self.modelFactory.colors[i] setStroke];
             [[UIColor clearColor] setFill];
             [model.paths[i] stroke];
         }

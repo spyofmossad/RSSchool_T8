@@ -13,25 +13,25 @@ import UIKit
     @objc public var drawingCallback: ((DrawingType) ->())?
     
     lazy var head: DrawingButton = {
-        let button = DrawingButton(title: "Head")
+        let button = DrawingButton(title: "Head", andSize: CGSize(width: 200, height: 40))
         button.drawing = .head
         return button
     }()
     
     lazy var planet: DrawingButton = {
-        let button = DrawingButton(title: "Planet")
+        let button = DrawingButton(title: "Planet", andSize: CGSize(width: 200, height: 40))
         button.drawing = .planet
         return button
     }()
     
     lazy var tree: DrawingButton = {
-        let button = DrawingButton(title: "Tree")
+        let button = DrawingButton(title: "Tree", andSize: CGSize(width: 200, height: 40))
         button.drawing = .tree
         return button
     }()
     
     lazy var landscape: DrawingButton = {
-        let button = DrawingButton(title: "Landscape")
+        let button = DrawingButton(title: "Landscape", andSize: CGSize(width: 200, height: 40))
         button.drawing = .landscape
         return button
     }()
@@ -49,7 +49,7 @@ import UIKit
         super.viewDidLoad()
         prepareSubviews()
         prepareTargets()
-        [planet, head, tree, landscape].first(where: {$0.drawing == currentDrawing})?.isPreSelected = true;
+        [planet, head, tree, landscape].first(where: {$0.drawing == currentDrawing})?.isSelected = true;
     }
     
     func prepareSubviews() {
