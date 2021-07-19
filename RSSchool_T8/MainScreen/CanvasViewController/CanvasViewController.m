@@ -11,7 +11,9 @@
 #import "UIColor+CustomColor.h"
 #import "UIFont+Montserrat.h"
 #import "RSSchool_T8-Swift.h"
-#import "Model.h"
+#import "ModelFactory.h"
+#import "DrawModel.h"
+#import "Head.h"
 
 
 @interface CanvasViewController ()
@@ -23,13 +25,12 @@
 @property (strong, nonatomic) AppButton *share;
 @property (strong, nonatomic) AppButton *reset;
 
-@property (nonatomic) Drawing currentDrawing;
+@property (nonatomic) DrawingType currentDrawing;
 @property (nonatomic) NSMutableArray *drawColors;
 @property (nonatomic) float drawTime;
-@property Model *drawModel;
 @property NSTimer *drawTimer;
 
-@property NSMutableArray<CAShapeLayer *> *layers;
+@property ModelFactory *modelFactory;
 
 @end
 
@@ -45,6 +46,7 @@
     self.currentDrawing = head;
     self.drawColors = [NSMutableArray new];
     self.drawTime = 1.0f;
+    self.modelFactory = [ModelFactory new];
 }
 
 - (void)prepareView {
@@ -131,14 +133,20 @@
 
 - (void)openPaletteOnTap {
     PaletteViewController *palette = [[PaletteViewController alloc] initWithColorSet:self.drawColors];
-    [palette getDrawColors:^(NSMutableArray *drawColors) {
-        self.drawColors = drawColors;
+    [palette getDrawColors:^(NSMutableArray *newColors) {
+        if (newColors.count > 0) {
+            self.drawColors = newColors;
+            DrawModel *model = [self.modelFactory getDrawModelOf: self.currentDrawing];
+            model.colors = newColors;
+            while (model.colors.count != 3) {
+                [model.colors addObject:UIColor.blackColor];
+            }
+        }
     }];
     [self addChildViewController: palette];
     palette.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height / 2);
     [self.view addSubview: palette.view];
-    
-    [UIView animateWithDuration:0.6 delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.6 delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         palette.view.frame = CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height / 2);
     } completion:^(BOOL finished) {
         [palette didMoveToParentViewController:self];
@@ -154,7 +162,7 @@
     timerViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height / 2);
     [self.view addSubview: timerViewController.view];
     
-    [UIView animateWithDuration:0.6 delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.6 delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         timerViewController.view.frame = CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height / 2);
     } completion:^(BOOL finished) {
         [timerViewController didMoveToParentViewController:self];
@@ -166,32 +174,11 @@
     self.draw.enabled = false;
     self.openTimer.enabled = false;
     self.share.enabled = false;
-    
-    self.layers = [NSMutableArray new];
-    if (self.canvas.layer.sublayers != nil) {
-        self.canvas.layer.sublayers = nil;
-    }
-    
-    self.drawModel = [[Model alloc] initDraw:self.currentDrawing];
-    if (self.drawColors.count > 0) {
-        self.drawModel.colors = [[NSMutableArray alloc] initWithArray:self.drawColors];
-        while (self.drawModel.colors.count != 3) {
-            [self.drawModel.colors addObject:UIColor.blackColor];
-        }
-    }
-    
-    for (int i = 0; i < self.drawModel.paths.count; i++) {
-        UIBezierPath *path = ((UIBezierPath *) self.drawModel.paths[i]);
-        UIColor *pathColor = ((UIColor *) self.drawModel.colors[i]);
-        CAShapeLayer *layer = [CAShapeLayer layer];
-        layer.fillColor = UIColor.clearColor.CGColor;
-        layer.strokeColor = pathColor.CGColor;
-        layer.strokeEnd = 0;
-        layer.lineCap = kCALineCapRound;
-        [layer setPath: path.CGPath];
         
-        [self.canvas.layer addSublayer:layer];
-        [self.layers addObject:layer];
+    DrawModel *model = [self.modelFactory getDrawModelOf: self.currentDrawing];
+    for (int i = 0; i < model.layers.count; i++) {
+        model.layers[i].strokeColor = model.colors[i].CGColor;
+        [self.canvas.layer addSublayer:model.layers[i]];
     }
     
     self.drawTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / 60.0
@@ -205,7 +192,6 @@
                                                       target: self
                                                     selector: @selector(onTickReverse)
                                                     userInfo: nil repeats:YES];
-    
     self.openPalette.enabled = true;
     self.openTimer.enabled = true;
     self.share.enabled = false;
@@ -215,8 +201,8 @@
 }
 
 - (void)onTick {
-    for (int i = 0; i < self.layers.count; i++) {
-        if (((CAShapeLayer *)self.layers[i]).strokeEnd > 1.0) {
+    for (CAShapeLayer *layer in self.canvas.layer.sublayers) {
+        if (layer.strokeEnd > 1.0) {
             [self.drawTimer invalidate];
             self.drawTimer = nil;
             
@@ -225,38 +211,34 @@
             self.share.enabled = true;
             self.draw.hidden = true;
             self.reset.hidden = false;
-            
             return;
         }
-        ((CAShapeLayer *) self.layers[i]).strokeEnd += 1.0 / (60.0 * self.drawTime);
-    };
+        layer.strokeEnd += 1.0 / (60.0 * self.drawTime);
+    }
 }
 
 - (void)onTickReverse {
-    for (int i = 0; i < self.layers.count; i++) {
-        if (((CAShapeLayer *)self.layers[i]).strokeEnd < 0.0) {
+    for (CAShapeLayer *layer in self.canvas.layer.sublayers) {
+        if (layer.strokeEnd < 0.0) {
             [self.drawTimer invalidate];
             self.drawTimer = nil;
             self.draw.enabled = true;
-            
+            self.canvas.layer.sublayers = nil;
             return;
         }
-        ((CAShapeLayer *) self.layers[i]).strokeEnd -= 1.0 / 10.0;
-    };
+        layer.strokeEnd -= 1.0 / 10.0;
+    }
 }
 
 - (UIImage *)renderImage {
     UIGraphicsImageRenderer *renderer = [[UIGraphicsImageRenderer alloc] initWithSize:CGSizeMake(300, 300)];
-    
     NSData *imageData = [renderer PNGDataWithActions:^(UIGraphicsImageRendererContext * context) {
         
-        for (int i = 0; i < self.drawModel.paths.count; i++) {
-            UIBezierPath *path = ((UIBezierPath *) self.drawModel.paths[i]);
-            UIColor *pathColor = ((UIColor *) self.drawModel.colors[i]);
-            [pathColor setStroke];
+        DrawModel *model = [self.modelFactory getDrawModelOf: self.currentDrawing];
+        for (int i = 0; i < model.paths.count; i++) {
+            [model.colors[i] setStroke];
             [[UIColor clearColor] setFill];
-            
-            [path stroke];
+            [model.paths[i] stroke];
         }
     }];
     
@@ -271,7 +253,7 @@
 
 - (void)openDrawingsOnTap {
     SwiftDrawingsViewController *drawings = [[SwiftDrawingsViewController alloc] initWithCurrentDrawing: self.currentDrawing];
-    drawings.drawingCallback = ^(Drawing newDraw) {
+    drawings.drawingCallback = ^(DrawingType newDraw) {
         self.currentDrawing = newDraw;
     };
     [self.navigationController pushViewController:drawings animated:true];

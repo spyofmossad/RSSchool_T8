@@ -12,11 +12,11 @@
 
 @synthesize drawing = _drawing;
 
-- (void)setDrawing:(Drawing) drawing {
+- (void)setDrawing:(DrawingType) drawing {
     _drawing = drawing;
 }
 
-- (Drawing)drawing {
+- (DrawingType)drawing {
     return _drawing;
 }
 

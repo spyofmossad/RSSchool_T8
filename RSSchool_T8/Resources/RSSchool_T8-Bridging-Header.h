@@ -4,6 +4,6 @@
 
 #import "ModalViewController.h"
 #import "DrawingButton.h"
-#import "Model.h"
+#import "DrawModel.h"
 #import "UIColor+CustomColor.h"
 #import "UIFont+Montserrat.h"

@@ -6,13 +6,13 @@
 //
 
 #import "AppButton.h"
-#import "Model.h"
+#import "DrawModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DrawingButton : ShadowedButton
 
-@property (nonatomic) Drawing drawing;
+@property (nonatomic) DrawingType drawing;
 
 @end
 

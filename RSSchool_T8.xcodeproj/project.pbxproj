@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ABCDA8326A5C46A000036B3 /* DrawModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCDA8226A5C46A000036B3 /* DrawModel.m */; };
+		0ABCDA8626A5C4A3000036B3 /* Head.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCDA8526A5C4A3000036B3 /* Head.m */; };
+		0ABCDA8926A5C4C5000036B3 /* Landscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCDA8826A5C4C5000036B3 /* Landscape.m */; };
+		0ABCDA8C26A5C4DB000036B3 /* Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCDA8B26A5C4DB000036B3 /* Planet.m */; };
+		0ABCDA8F26A5C4EF000036B3 /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCDA8E26A5C4EF000036B3 /* Tree.m */; };
+		0ABCDA9226A5C507000036B3 /* ModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCDA9126A5C507000036B3 /* ModelFactory.m */; };
 		7319909326A2118800428DE4 /* PaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7319909226A2118800428DE4 /* PaletteViewController.m */; };
 		7319909726A2195500428DE4 /* ShadowedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7319909626A2195500428DE4 /* ShadowedButton.m */; };
 		731990A226A220E400428DE4 /* PaletteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 731990A126A220E400428DE4 /* PaletteButton.m */; };
@@ -22,12 +28,23 @@
 		731A733526A1CDF500B95D77 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 731A733326A1CDF500B95D77 /* Montserrat-Regular.ttf */; };
 		731A734026A1D0B200B95D77 /* UIFont+Montserrat.m in Sources */ = {isa = PBXBuildFile; fileRef = 731A733F26A1D0B200B95D77 /* UIFont+Montserrat.m */; };
 		7357E50726A2CEFB007B5904 /* SwiftDrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357E50626A2CEFB007B5904 /* SwiftDrawingsViewController.swift */; };
-		7357E51D26A2D8BF007B5904 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7357E51C26A2D8BF007B5904 /* Model.m */; };
 		7357E52226A2F352007B5904 /* DrawingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7357E52126A2F352007B5904 /* DrawingButton.m */; };
 		73AF9B6526A35D5A006AC101 /* SwiftTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF9B6426A35D5A006AC101 /* SwiftTimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ABCDA8126A5C46A000036B3 /* DrawModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawModel.h; sourceTree = "<group>"; };
+		0ABCDA8226A5C46A000036B3 /* DrawModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawModel.m; sourceTree = "<group>"; };
+		0ABCDA8426A5C4A3000036B3 /* Head.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Head.h; sourceTree = "<group>"; };
+		0ABCDA8526A5C4A3000036B3 /* Head.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Head.m; sourceTree = "<group>"; };
+		0ABCDA8726A5C4C5000036B3 /* Landscape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Landscape.h; sourceTree = "<group>"; };
+		0ABCDA8826A5C4C5000036B3 /* Landscape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Landscape.m; sourceTree = "<group>"; };
+		0ABCDA8A26A5C4DB000036B3 /* Planet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Planet.h; sourceTree = "<group>"; };
+		0ABCDA8B26A5C4DB000036B3 /* Planet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Planet.m; sourceTree = "<group>"; };
+		0ABCDA8D26A5C4EF000036B3 /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		0ABCDA8E26A5C4EF000036B3 /* Tree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tree.m; sourceTree = "<group>"; };
+		0ABCDA9026A5C507000036B3 /* ModelFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelFactory.h; sourceTree = "<group>"; };
+		0ABCDA9126A5C507000036B3 /* ModelFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelFactory.m; sourceTree = "<group>"; };
 		7319909126A2118800428DE4 /* PaletteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteViewController.h; sourceTree = "<group>"; };
 		7319909226A2118800428DE4 /* PaletteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteViewController.m; sourceTree = "<group>"; };
 		7319909526A2195500428DE4 /* ShadowedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadowedButton.h; sourceTree = "<group>"; };
@@ -55,8 +72,6 @@
 		731A733F26A1D0B200B95D77 /* UIFont+Montserrat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Montserrat.m"; sourceTree = "<group>"; };
 		7357E50526A2CEFA007B5904 /* RSSchool_T8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSchool_T8-Bridging-Header.h"; sourceTree = "<group>"; };
 		7357E50626A2CEFB007B5904 /* SwiftDrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDrawingsViewController.swift; sourceTree = "<group>"; };
-		7357E51B26A2D8BF007B5904 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
-		7357E51C26A2D8BF007B5904 /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		7357E52026A2F352007B5904 /* DrawingButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingButton.h; sourceTree = "<group>"; };
 		7357E52126A2F352007B5904 /* DrawingButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingButton.m; sourceTree = "<group>"; };
 		73AF9B6426A35D5A006AC101 /* SwiftTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTimerViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +88,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ABCDA8026A5C456000036B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0ABCDA9026A5C507000036B3 /* ModelFactory.h */,
+				0ABCDA9126A5C507000036B3 /* ModelFactory.m */,
+				0ABCDA8126A5C46A000036B3 /* DrawModel.h */,
+				0ABCDA8226A5C46A000036B3 /* DrawModel.m */,
+				0ABCDA9326A5C5C3000036B3 /* Head */,
+				0ABCDA9426A5C5CB000036B3 /* Landscape */,
+				0ABCDA9526A5C5D3000036B3 /* Planet */,
+				0ABCDA9626A5C5E2000036B3 /* Tree */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0ABCDA9326A5C5C3000036B3 /* Head */ = {
+			isa = PBXGroup;
+			children = (
+				0ABCDA8426A5C4A3000036B3 /* Head.h */,
+				0ABCDA8526A5C4A3000036B3 /* Head.m */,
+			);
+			path = Head;
+			sourceTree = "<group>";
+		};
+		0ABCDA9426A5C5CB000036B3 /* Landscape */ = {
+			isa = PBXGroup;
+			children = (
+				0ABCDA8726A5C4C5000036B3 /* Landscape.h */,
+				0ABCDA8826A5C4C5000036B3 /* Landscape.m */,
+			);
+			path = Landscape;
+			sourceTree = "<group>";
+		};
+		0ABCDA9526A5C5D3000036B3 /* Planet */ = {
+			isa = PBXGroup;
+			children = (
+				0ABCDA8A26A5C4DB000036B3 /* Planet.h */,
+				0ABCDA8B26A5C4DB000036B3 /* Planet.m */,
+			);
+			path = Planet;
+			sourceTree = "<group>";
+		};
+		0ABCDA9626A5C5E2000036B3 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				0ABCDA8D26A5C4EF000036B3 /* Tree.h */,
+				0ABCDA8E26A5C4EF000036B3 /* Tree.m */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
 		7319909A26A2196200428DE4 /* ShadowedButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +187,7 @@
 		731A72F526A0A6D700B95D77 /* RSSchool_T8 */ = {
 			isa = PBXGroup;
 			children = (
+				0ABCDA8026A5C456000036B3 /* Model */,
 				731A72F626A0A6D700B95D77 /* AppDelegate.h */,
 				731A72F726A0A6D700B95D77 /* AppDelegate.m */,
 				73C550D726A2AD2E008670BA /* MainScreen */,
@@ -128,8 +195,6 @@
 				7319909D26A219BC00428DE4 /* Buttons */,
 				731A731626A1644900B95D77 /* Resources */,
 				731A732F26A1C16900B95D77 /* Categories */,
-				7357E51B26A2D8BF007B5904 /* Model.h */,
-				7357E51C26A2D8BF007B5904 /* Model.m */,
 			);
 			path = RSSchool_T8;
 			sourceTree = "<group>";
@@ -311,17 +376,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7319909726A2195500428DE4 /* ShadowedButton.m in Sources */,
+				0ABCDA8926A5C4C5000036B3 /* Landscape.m in Sources */,
+				0ABCDA8326A5C46A000036B3 /* DrawModel.m in Sources */,
 				7319909326A2118800428DE4 /* PaletteViewController.m in Sources */,
+				0ABCDA8C26A5C4DB000036B3 /* Planet.m in Sources */,
 				73AF9B6526A35D5A006AC101 /* SwiftTimerViewController.swift in Sources */,
 				731A72FE26A0A6D700B95D77 /* CanvasViewController.m in Sources */,
 				731A72F826A0A6D700B95D77 /* AppDelegate.m in Sources */,
+				0ABCDA9226A5C507000036B3 /* ModelFactory.m in Sources */,
 				7357E52226A2F352007B5904 /* DrawingButton.m in Sources */,
 				731A730926A0A6DA00B95D77 /* main.m in Sources */,
 				731A734026A1D0B200B95D77 /* UIFont+Montserrat.m in Sources */,
 				731A732226A1675E00B95D77 /* AppButton.m in Sources */,
-				7357E51D26A2D8BF007B5904 /* Model.m in Sources */,
+				0ABCDA8626A5C4A3000036B3 /* Head.m in Sources */,
 				731990A226A220E400428DE4 /* PaletteButton.m in Sources */,
 				7357E50726A2CEFB007B5904 /* SwiftDrawingsViewController.swift in Sources */,
+				0ABCDA8F26A5C4EF000036B3 /* Tree.m in Sources */,
 				731A732D26A1C16400B95D77 /* UIColor+CustomColor.m in Sources */,
 				731A732826A193B500B95D77 /* ModalViewController.m in Sources */,
 			);

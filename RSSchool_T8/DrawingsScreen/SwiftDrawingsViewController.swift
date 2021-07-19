@@ -9,8 +9,8 @@ import UIKit
 
 @objc class SwiftDrawingsViewController: UIViewController {
     
-    private var currentDrawing: Drawing
-    @objc public var drawingCallback: ((Drawing) ->())?
+    private var currentDrawing: DrawingType
+    @objc public var drawingCallback: ((DrawingType) ->())?
     
     lazy var head: DrawingButton = {
         let button = DrawingButton(title: "Head")
@@ -36,7 +36,7 @@ import UIKit
         return button
     }()
     
-    @objc public init(currentDrawing: Drawing) {
+    @objc public init(currentDrawing: DrawingType) {
         self.currentDrawing = currentDrawing
         super.init(nibName: nil, bundle: nil)
     }
